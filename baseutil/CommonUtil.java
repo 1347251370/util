@@ -553,8 +553,8 @@ public class CommonUtil {
             }
             return frontStr + dailStr;
         }
-        StringBuilder hideStr = null;
-        for (int i = 0; i < idCard.length() - startHide + 1; i++) {
+        StringBuilder hideStr = new StringBuilder("*");
+        for (int i = 0; i < idCard.length() - startHide ; i++) {
             hideStr = hideStr.append("*");
         }
         return idCard.substring(0, startHide - 1) + hideStr;
